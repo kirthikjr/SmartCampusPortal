@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Campus Complaint Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Smart Campus Complaint Portal</h1>
+</header>
+
+<div class="container">
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <div class="card stat">
+            <h3>Total</h3>
+            <p id="totalCount">0</p>
+        </div>
+        <div class="card stat">
+            <h3>Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+        <div class="card stat">
+            <h3>Solved</h3>
+            <p id="solvedCount">0</p>
+        </div>
+    </div>
+
+    <!-- Complaint Form -->
+    <div class="form-section">
+        <h2>Submit Complaint</h2>
+        <form id="complaintForm">
+            <input type="text" id="name" placeholder="Student Name" required>
+            <input type="text" id="title" placeholder="Complaint Title" required>
+
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Hostel</option>
+                <option>Canteen</option>
+                <option>Bus</option>
+                <option>Classroom</option>
+            </select>
+
+            <select id="priority" required>
+                <option value="">Select Priority</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <textarea id="description" rows="4" placeholder="Description" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Complaint List -->
+    <div id="complaintList"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
